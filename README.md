@@ -46,7 +46,26 @@
 
 ## 📫 Connect with Me
 <p align="center">
-  <a href="https://github.com/ZCoffeeCore"><img src="https://img.shields.io/badge/GitHub-%2312100E.svg?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/tu-perfil/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:tuemail@gmail.com"><img src="https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <!-- GitHub -->
+  <a href="https://github.com/ZCoffeeCore">
+    <img src="https://img.shields.io/github/followers/ZCoffeeCore?style=for-the-badge&logo=github&logoColor=white" alt="GitHub followers"/>
+  </a>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/tu_usuario">
+    <img src="https://img.shields.io/twitter/follow/tu_usuario?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter followers"/>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/tu-perfil/">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:tuemail@gmail.com">
+    <img src="https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+
+  <!-- Visitas al README -->
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=ZCoffeeCore.ZCoffeeCore" alt="Profile Views"/>
 </p>
