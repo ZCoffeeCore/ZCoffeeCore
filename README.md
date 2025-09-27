@@ -72,7 +72,7 @@
 
 
 <details>
-<summary>📊 Detailed GitHub & Code Time Stats</summary>
+<summary>## 📊 Detailed GitHub & Code Time Stats</summary>
 
 **🐱 My GitHub Data**
 - ⏱ Total coding time: N/A
