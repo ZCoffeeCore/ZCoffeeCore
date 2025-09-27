@@ -106,36 +106,6 @@
 
 _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 </details>
-
-
-
-
-
-
-
-
-
-
-<details>
-<summary>📊 Detailed GitHub & Code Time Stats</summary>
-
-**🐱 My GitHub Data**
-- ⏱ Total coding time: N/A
-- 📄 Lines of Code: N/A
-- 📦 GitHub Storage Used: 75 kB
-- 🏆 Contributions in 2025: 37
-- 📜 Public Repositories: 2
-- 🔑 Private Repositories: 0
-
-**🌞 Time of Day Activity (most active: Night 🦉)**
-| Time      | Commits | Percentage |
-|-----------|--------|------------|
-| Morning ☀️  | 0 | 0.00% |
-| Daytime 🌆  | 0 | 0.00% |
-| Evening 🌃  | 10 | 27.03% |
-| Night 🦉   | 27 | 72.97% |
-
-_Last Updated on Sat, 27 Sep 2025 20:52:04 GMT_
 </details>
 
 
