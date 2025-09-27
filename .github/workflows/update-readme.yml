@@ -25,6 +25,9 @@ jobs:
       - name: Generate top languages
         run: node scripts/updateTopLanguages.js
 
+      - name: Generate README stats
+        run: node scripts/updateStats.js
+        
       - name: Commit changes
         run: |
           git config user.name "github-actions"
