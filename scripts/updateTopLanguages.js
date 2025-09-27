@@ -166,6 +166,9 @@ async function main() {
 
   fs.writeFileSync('README.md', readme);
   console.log('✅ README actualizado completamente');
+  console.log(`📌 Lenguajes: ${topLangs.join(', ') || 'N/A'}`);
+  console.log(`📌 Frameworks: ${frameworks.join(', ') || 'N/A'}`);
+  console.log(`📌 Tools: ${tools.join(', ') || 'N/A'}`);
 }
 
 main();
