@@ -2,20 +2,10 @@ import fs from 'fs';
 import axios from 'axios';
 
 const username = 'ZCoffeeCore';
-const topLimit = 5;
-const token = process.env.GH_PAT; // Tu token desde GitHub Actions
+const topLimit = 10;
+const token = process.env.GH_PAT; // Token desde GitHub Actions
 
 const headers = { Authorization: `token ${token}` };
-
-// Lista de iconos válidos en skillicons.dev
-const validIcons = [
-  // Lenguajes
-  'javascript','typescript','python','java','c','cpp','csharp','php','ruby','go','rust','html','css','kotlin','swift',
-  // Frameworks/Librerías
-  'react','vue','angular','svelte','nextjs','nuxt','express','nestjs','flask','django','spring','laravel','symfony','fastapi','tailwind','bootstrap',
-  // Herramientas/APIs/Plataformas
-  'git','docker','postman','githubactions','vscode','npm','yarn','webpack','babel','linux','firebase','supabase','mongodb','mysql','postgresql','redis','aws','azure','gcp'
-];
 
 // Obtener repositorios (públicos y privados)
 async function getRepos() {
@@ -41,7 +31,7 @@ async function getFileContent(repoName, path) {
   }
 }
 
-// Listar archivos recursivamente (carpetas, subcarpetas, submódulos)
+// Listar archivos recursivamente
 async function listFiles(repoName, path = '') {
   try {
     const res = await axios.get(`https://api.github.com/repos/${username}/${repoName}/contents/${path}`, { headers });
@@ -51,9 +41,6 @@ async function listFiles(repoName, path = '') {
         files.push(item.path);
       } else if (item.type === 'dir') {
         files = files.concat(await listFiles(repoName, item.path));
-      } else if (item.type === 'submodule') {
-        // submodule: puedes agregar lógica para leer submodulos si quieres
-        // actualmente los ignoramos
       }
     }
     return files;
@@ -80,11 +67,6 @@ function parseRequirementsTxt(content) {
     .filter(Boolean);
 }
 
-// Filtrar solo iconos válidos
-function filterValidIcons(list) {
-  return list.map(x => x.toLowerCase()).filter(x => validIcons.includes(x));
-}
-
 // Detectar herramientas/APIs según archivos
 function detectTools(files) {
   const tools = new Set();
@@ -94,7 +76,7 @@ function detectTools(files) {
     if (name.includes('.github/workflows')) tools.add('githubactions');
     if (name.includes('firebase.json')) tools.add('firebase');
     if (name.includes('supabase')) tools.add('supabase');
-    if (name.includes('terraform')) tools.add('aws'); // ejemplo genérico
+    if (name.includes('terraform')) tools.add('aws');
     if (name.includes('azure')) tools.add('azure');
     if (name.includes('gcp')) tools.add('gcp');
   });
@@ -118,13 +100,17 @@ async function main() {
     // Archivos recursivos
     const files = await listFiles(repo.name);
 
-    // Frameworks
-    if (files.includes('package.json')) {
-      const content = await getFileContent(repo.name, 'package.json');
+    // Buscar package.json
+    const pkgFile = files.find(f => f.toLowerCase().endsWith('package.json'));
+    if (pkgFile) {
+      const content = await getFileContent(repo.name, pkgFile);
       if (content) parsePackageJson(content).forEach(dep => frameworksSet.add(dep.toLowerCase()));
     }
-    if (files.includes('requirements.txt')) {
-      const content = await getFileContent(repo.name, 'requirements.txt');
+
+    // Buscar requirements.txt
+    const reqFile = files.find(f => f.toLowerCase().endsWith('requirements.txt'));
+    if (reqFile) {
+      const content = await getFileContent(repo.name, reqFile);
       if (content) parseRequirementsTxt(content).forEach(dep => frameworksSet.add(dep.toLowerCase()));
     }
 
@@ -138,8 +124,12 @@ async function main() {
     .slice(0, topLimit)
     .map(([lang]) => lang.toLowerCase());
 
-  const frameworks = filterValidIcons(Array.from(frameworksSet)).slice(0, topLimit);
-  const tools = filterValidIcons(Array.from(toolsSet));
+  // Frameworks (solo top 5 para README, pero log muestra todos)
+  const allFrameworks = Array.from(frameworksSet);
+  const frameworks = allFrameworks.slice(0, topLimit);
+
+  // Tools
+  const tools = Array.from(toolsSet);
 
   // URLs de iconos
   const langIconUrl = `https://skillicons.dev/icons?i=${topLangs.join(',')}&theme=dark`;
@@ -165,9 +155,12 @@ async function main() {
   );
 
   fs.writeFileSync('README.md', readme);
+
+  // Logs
   console.log('✅ README actualizado completamente');
-  console.log(`📌 Lenguajes: ${topLangs.join(', ') || 'N/A'}`);
-  console.log(`📌 Frameworks: ${frameworks.join(', ') || 'N/A'}`);
+  console.log(`📌 Lenguajes (Top ${topLimit}): ${topLangs.join(', ') || 'N/A'}`);
+  console.log(`📌 Frameworks (Top ${topLimit}): ${frameworks.join(', ') || 'N/A'}`);
+  console.log(`📦 Frameworks detectados (todos): ${allFrameworks.join(', ') || 'N/A'}`);
   console.log(`📌 Tools: ${tools.join(', ') || 'N/A'}`);
 }
 
