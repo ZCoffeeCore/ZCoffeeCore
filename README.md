@@ -1,4 +1,3 @@
-<!-- Banner animado -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4C2A1E,100:2C1A12&height=120&section=header&text=☕%20ZCoffeeCore%20💻&fontColor=ffffff&fontSize=50&animation=fadeIn" />
 </p>
@@ -17,10 +16,7 @@
 
 ## 🔧 Tech Stack
 <p align="center">
-  <!-- Icons dinámicos actualizados por tu workflow -->
-  <!--LANGUAGES_START-->
   <img src="https://skillicons.dev/icons?i=java,javascript,html,css,react,spring,git,mysql,postgresql&theme=dark" />
-  <!--LANGUAGES_END-->
 </p>
 
 ---
@@ -37,23 +33,14 @@
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=ZCoffeeCore&theme=tokyonight&column=5&margin-w=10" />
 </p>
-
----
-
+<!--
 ## 📂 Projects
 | Project | Description | Tech Stack | Link |
 |---------|-------------|-----------|------|
 | ZCoffeeCore Plugin | Custom Minecraft plugin with advanced features | Java, PaperAPI | [GitHub](https://github.com/ZCoffeeCore) |
 | Web Dashboard | Responsive web dashboard for inventory management | React, JS, HTML, CSS | [GitHub](https://github.com/ZCoffeeCore/WebDashboard) |
 | Other Projects | Personal experiments & scripts | Python, JS | [GitHub](https://github.com/ZCoffeeCore) |
-
----
-
-## ⚡ Fun Fact
-<p align="center">
-*"Coffee first, then innovation."* ☕🚀  
-<img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="50"/>
-</p>
+-->
 
 ---
 
