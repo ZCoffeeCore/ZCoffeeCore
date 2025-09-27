@@ -22,10 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate top languages
+      - name: Update TechStack README
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-        run: node scripts/updateTopLanguages.js
+        run: node scripts/updateTechStack.js
 
       - name: Generate README stats
         env:
