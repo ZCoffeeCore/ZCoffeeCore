@@ -18,8 +18,8 @@
 <summary><h2>🔧 Tech Stack</h2></summary>
 <p align="center">
   <!--LANGUAGES_START-->
-  <img src="https://skillicons.dev/icons?i=java,javascript,html,css,react,spring,git,mysql,postgresql&theme=dark" />
-  <!--LANGUAGES_END-->
+<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<!--LANGUAGES_END-->
 </p>
 </details>
 
@@ -99,6 +99,7 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 
 
 
+
 <details>
 <summary>📊 Detailed GitHub & Code Time Stats</summary>
 
@@ -106,7 +107,7 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 - ⏱ Total coding time: N/A
 - 📄 Lines of Code: N/A
 - 📦 GitHub Storage Used: 47 kB
-- 🏆 Contributions in 2025: 29
+- 🏆 Contributions in 2025: 30
 - 📜 Public Repositories: 2
 - 🔑 Private Repositories: 0
 
@@ -115,8 +116,9 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 |-----------|--------|------------|
 | Morning ☀️  | 0 | 0.00% |
 | Daytime 🌆  | 0 | 0.00% |
-| Evening 🌃  | 2 | 6.90% |
-| Night 🦉   | 27 | 93.10% |
+| Evening 🌃  | 3 | 10.00% |
+| Night 🦉   | 27 | 90.00% |
 
-_Last Updated on Sat, 27 Sep 2025 19:44:52 GMT_
+_Last Updated on Sat, 27 Sep 2025 19:48:57 GMT_
 </details>
+
