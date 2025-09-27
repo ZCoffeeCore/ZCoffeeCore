@@ -1,0 +1,31 @@
+name: Update README Languages
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Se ejecuta todos los días a medianoche
+  workflow_dispatch: # Permite ejecutarlo manualmente
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Generate top languages
+        run: node scripts/updateTopLanguages.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Update top languages" || echo "No changes to commit"
+          git push
