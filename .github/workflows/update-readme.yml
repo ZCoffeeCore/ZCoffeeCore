@@ -23,9 +23,13 @@ jobs:
         run: npm install
 
       - name: Generate top languages
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: node scripts/updateTopLanguages.js
 
       - name: Generate README stats
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: node scripts/updateStats.js
         
       - name: Commit changes
