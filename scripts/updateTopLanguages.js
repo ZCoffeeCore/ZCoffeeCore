@@ -1,31 +1,32 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const username = 'ZCoffeeCore'; // <- Cambia esto a tu usuario de GitHub
+const username = 'ZCoffeeCore'; 
+const topLimit = 5; 
 
 async function main() {
   try {
-    // Obtener repositorios del usuario
-    const repos = await axios.get(`https://api.github.com/users/${username}/repos?per_page=100`);
+
+    const reposRes = await axios.get(`https://api.github.com/users/${username}/repos?per_page=100`);
+    const repos = reposRes.data;
+
     const langCount = {};
 
-    // Contar lenguajes por repositorio
-    repos.data.forEach(repo => {
-      if (repo.language) {
-        langCount[repo.language] = (langCount[repo.language] || 0) + 1;
+    for (const repo of repos) {
+      const langsRes = await axios.get(`https://api.github.com/repos/${username}/${repo.name}/languages`);
+      const langs = langsRes.data;
+      for (const lang in langs) {
+        langCount[lang] = (langCount[lang] || 0) + langs[lang];
       }
-    });
+    }
 
-    // Ordenar por cantidad y tomar top 5
     const topLangs = Object.entries(langCount)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
+      .slice(0, topLimit)
       .map(([lang]) => lang.toLowerCase());
 
-    // Generar URL de skillicons
     const iconUrl = `https://skillicons.dev/icons?i=${topLangs.join(',')}&theme=dark`;
 
-    // Leer README y reemplazar sección de Tech Stack
     let readme = fs.readFileSync('README.md', 'utf-8');
     readme = readme.replace(
       /(<!--LANGUAGES_START-->).*(<!--LANGUAGES_END-->)/s,
@@ -33,9 +34,9 @@ async function main() {
     );
 
     fs.writeFileSync('README.md', readme);
-    console.log('README actualizado con los top lenguajes!');
+    console.log('README actualizado con los top lenguajes:', topLangs);
   } catch (err) {
-    console.error(err);
+    console.error('Error actualizando README:', err);
   }
 }
 
