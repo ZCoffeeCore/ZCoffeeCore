@@ -7,6 +7,24 @@ const token = process.env.GH_PAT; // Token desde GitHub Actions
 
 const headers = { Authorization: `token ${token}` };
 
+// 🔹 Whitelists para clasificar
+const frameworksWhitelist = [
+  // JS/TS
+  'react','vue','angular','svelte','next','nextjs','nuxt','express','nestjs',
+  // CSS
+  'tailwind','bootstrap',
+  // Python
+  'flask','django','fastapi',
+  // Java
+  'spring','springboot',
+  // PHP
+  'laravel','symfony',
+];
+const toolsWhitelist = [
+  'node','npm','yarn','docker','postman','githubactions','firebase',
+  'supabase','mongodb','mysql','postgresql','redis','aws','azure','gcp','vscode','webpack','babel','linux'
+];
+
 // Obtener repositorios (públicos y privados)
 async function getRepos() {
   const res = await axios.get(`https://api.github.com/user/repos?per_page=100`, { headers });
@@ -67,7 +85,7 @@ function parseRequirementsTxt(content) {
     .filter(Boolean);
 }
 
-// Detectar herramientas/APIs según archivos
+// Detectar herramientas según archivos
 function detectTools(files) {
   const tools = new Set();
   files.forEach(f => {
@@ -79,6 +97,7 @@ function detectTools(files) {
     if (name.includes('terraform')) tools.add('aws');
     if (name.includes('azure')) tools.add('azure');
     if (name.includes('gcp')) tools.add('gcp');
+    if (name.includes('package-lock.json') || name.includes('yarn.lock')) tools.add('node');
   });
   return Array.from(tools);
 }
@@ -104,14 +123,26 @@ async function main() {
     const pkgFile = files.find(f => f.toLowerCase().endsWith('package.json'));
     if (pkgFile) {
       const content = await getFileContent(repo.name, pkgFile);
-      if (content) parsePackageJson(content).forEach(dep => frameworksSet.add(dep.toLowerCase()));
+      if (content) {
+        parsePackageJson(content).forEach(dep => {
+          const clean = dep.toLowerCase();
+          if (frameworksWhitelist.includes(clean)) frameworksSet.add(clean);
+          if (toolsWhitelist.includes(clean)) toolsSet.add(clean);
+        });
+      }
     }
 
     // Buscar requirements.txt
     const reqFile = files.find(f => f.toLowerCase().endsWith('requirements.txt'));
     if (reqFile) {
       const content = await getFileContent(repo.name, reqFile);
-      if (content) parseRequirementsTxt(content).forEach(dep => frameworksSet.add(dep.toLowerCase()));
+      if (content) {
+        parseRequirementsTxt(content).forEach(dep => {
+          const clean = dep.toLowerCase();
+          if (frameworksWhitelist.includes(clean)) frameworksSet.add(clean);
+          if (toolsWhitelist.includes(clean)) toolsSet.add(clean);
+        });
+      }
     }
 
     // Herramientas/APIs
@@ -124,11 +155,8 @@ async function main() {
     .slice(0, topLimit)
     .map(([lang]) => lang.toLowerCase());
 
-  // Frameworks (solo top 5 para README, pero log muestra todos)
-  const allFrameworks = Array.from(frameworksSet);
-  const frameworks = allFrameworks.slice(0, topLimit);
-
-  // Tools
+  // Frameworks y Tools filtrados
+  const frameworks = Array.from(frameworksSet).slice(0, topLimit);
   const tools = Array.from(toolsSet);
 
   // URLs de iconos
@@ -159,8 +187,7 @@ async function main() {
   // Logs
   console.log('✅ README actualizado completamente');
   console.log(`📌 Lenguajes (Top ${topLimit}): ${topLangs.join(', ') || 'N/A'}`);
-  console.log(`📌 Frameworks (Top ${topLimit}): ${frameworks.join(', ') || 'N/A'}`);
-  console.log(`📦 Frameworks detectados (todos): ${allFrameworks.join(', ') || 'N/A'}`);
+  console.log(`📌 Frameworks: ${frameworks.join(', ') || 'N/A'}`);
   console.log(`📌 Tools: ${tools.join(', ') || 'N/A'}`);
 }
 
