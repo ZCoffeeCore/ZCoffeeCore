@@ -69,3 +69,42 @@
   <!-- Visitas al README -->
   <img src="https://visitor-badge.laobi.icu/badge?page_id=ZCoffeeCore.ZCoffeeCore" alt="Profile Views"/>
 </p>
+
+<details>
+<summary>📊 Detailed GitHub & Code Time Stats</summary>
+<!-- Este bloque será actualizado automáticamente por scripts/updateStats.js -->
+
+**🐱 My GitHub Data**
+- ⏱ Total coding time: N/A
+- 📄 Lines of Code: N/A
+- 📦 GitHub Storage Used: N/A
+- 🏆 Contributions in 2025: N/A
+- 📜 Public Repositories: N/A
+- 🔑 Private Repositories: N/A
+
+**🌞 Time of Day Activity (most active: N/A)**
+| Time      | Commits | Percentage |
+|-----------|--------|------------|
+| Morning ☀️  | 0      | 0% |
+| Daytime 🌆  | 0      | 0% |
+| Evening 🌃  | 0      | 0% |
+| Night 🦉   | 0      | 0% |
+
+**📅 Day of Week Productivity**
+| Day       | Commits | Percentage |
+|-----------|--------|------------|
+| Monday    | 0      | 0% |
+| Tuesday   | 0      | 0% |
+| Wednesday | 0      | 0% |
+| Thursday  | 0      | 0% |
+| Friday    | 0      | 0% |
+| Saturday  | 0      | 0% |
+| Sunday    | 0      | 0% |
+
+**I Mostly Code in:**
+| Language   | Repos | Percentage |
+|------------|-------|------------|
+| N/A        | 0     | 0% |
+
+_Last Updated on N/A_
+</details>
