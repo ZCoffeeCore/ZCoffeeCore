@@ -14,8 +14,7 @@
 
 ---
 
-<details>
-<summary><h2>🔧 Tech Stack</h2></summary>
+<details><summary><h2>🔧 Tech Stack</h2></summary>
 <p align="center">
   <!--LANGUAGES_START-->
 <p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
