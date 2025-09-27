@@ -14,10 +14,14 @@
 
 ---
 
-## 🔧 Tech Stack
+<details>
+<summary><h2>🔧 Tech Stack</h2></summary>
 <p align="center">
+  <!--LANGUAGES_START-->
   <img src="https://skillicons.dev/icons?i=java,javascript,html,css,react,spring,git,mysql,postgresql&theme=dark" />
+  <!--LANGUAGES_END-->
 </p>
+</details>
 
 ---
 
