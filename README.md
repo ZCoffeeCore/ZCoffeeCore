@@ -14,9 +14,7 @@
 
 ## 🔧 Tech Stack
 <!--LANGUAGES_START-->
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,js,react&theme=dark" />
-</p>
+<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
 <!--LANGUAGES_END-->
 
 ---
