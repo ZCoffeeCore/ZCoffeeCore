@@ -21,6 +21,16 @@
 <p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
 <!--LANGUAGES_END-->
 </p>
+<p align="center">
+  <!--FRAMEWORKS_START-->
+<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<!--FRAMEWORKS_END-->
+</p>
+<p align="center">
+  <!--TOOLS_START-->
+<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<!--TOOLS_END-->
+</p>
 </details>
 
 ---
