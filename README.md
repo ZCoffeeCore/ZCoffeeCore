@@ -12,10 +12,12 @@
 
 ---
 
-## 🔧 Tech Stack  
+## 🔧 Tech Stack
+<!--LANGUAGES_START-->
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,js,react,html,css,git,github,mysql,postgresql&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,js,react&theme=dark" />
 </p>
+<!--LANGUAGES_END-->
 
 ---
 
