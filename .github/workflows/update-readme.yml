@@ -2,8 +2,8 @@ name: Update README Languages
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Se ejecuta todos los días a medianoche
-  workflow_dispatch: # Permite ejecutarlo manualmente
+    - cron: '0 0 * * *'
+  workflow_dispatch: 
 
 jobs:
   update-readme:
