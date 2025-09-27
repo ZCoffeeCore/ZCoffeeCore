@@ -1,12 +1,11 @@
-const fs = require('fs');
-const axios = require('axios');
+import fs from 'fs';
+import axios from 'axios';
 
-const username = 'ZCoffeeCore'; 
-const topLimit = 5; 
+const username = 'ZCoffeeCore';
+const topLimit = 5;
 
 async function main() {
   try {
-
     const reposRes = await axios.get(`https://api.github.com/users/${username}/repos?per_page=100`);
     const repos = reposRes.data;
 
