@@ -3,11 +3,11 @@ import axios from 'axios';
 
 const username = 'ZCoffeeCore';
 const topLimit = 10;
-const token = process.env.GH_PAT; // Token desde GitHub Actions
+const token = process.env.GH_PAT; 
 
 const headers = { Authorization: `token ${token}` };
 
-// 🔹 Whitelists para clasificar
+//Whitelists 
 const frameworksWhitelist = [
   // JS/TS
   'react','vue','angular','svelte','next','nextjs','nuxt','express','nestjs',
