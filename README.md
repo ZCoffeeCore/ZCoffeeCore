@@ -23,12 +23,12 @@
 </p>
 <p align="center">
   <!--FRAMEWORKS_START-->
-<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=&theme=dark" /></p>
 <!--FRAMEWORKS_END-->
 </p>
 <p align="center">
   <!--TOOLS_START-->
-<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=githubactions&theme=dark" /></p>
 <!--TOOLS_END-->
 </p>
 </details>
@@ -111,6 +111,7 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 
 
 
+
 <details>
 <summary>📊 Detailed GitHub & Code Time Stats</summary>
 
@@ -118,7 +119,7 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 - ⏱ Total coding time: N/A
 - 📄 Lines of Code: N/A
 - 📦 GitHub Storage Used: 47 kB
-- 🏆 Contributions in 2025: 32
+- 🏆 Contributions in 2025: 33
 - 📜 Public Repositories: 2
 - 🔑 Private Repositories: 0
 
@@ -127,10 +128,11 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 |-----------|--------|------------|
 | Morning ☀️  | 0 | 0.00% |
 | Daytime 🌆  | 0 | 0.00% |
-| Evening 🌃  | 5 | 15.63% |
-| Night 🦉   | 27 | 84.38% |
+| Evening 🌃  | 6 | 18.18% |
+| Night 🦉   | 27 | 81.82% |
 
-_Last Updated on Sat, 27 Sep 2025 20:16:42 GMT_
+_Last Updated on Sat, 27 Sep 2025 20:23:09 GMT_
 </details>
+
 
 
