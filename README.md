@@ -23,7 +23,7 @@
 </p>
 <p align="center">
   <!--FRAMEWORKS_START-->
-<p align="center"><img src="https://skillicons.dev/icons?i=&theme=dark" /></p>
+<p align="center">No frameworks detected</p>
 <!--FRAMEWORKS_END-->
 </p>
 <p align="center">
@@ -115,14 +115,15 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 
 
 
+
 <details>
 <summary>📊 Detailed GitHub & Code Time Stats</summary>
 
 **🐱 My GitHub Data**
 - ⏱ Total coding time: N/A
 - 📄 Lines of Code: N/A
-- 📦 GitHub Storage Used: 47 kB
-- 🏆 Contributions in 2025: 36
+- 📦 GitHub Storage Used: 75 kB
+- 🏆 Contributions in 2025: 37
 - 📜 Public Repositories: 2
 - 🔑 Private Repositories: 0
 
@@ -131,11 +132,12 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 |-----------|--------|------------|
 | Morning ☀️  | 0 | 0.00% |
 | Daytime 🌆  | 0 | 0.00% |
-| Evening 🌃  | 9 | 25.00% |
-| Night 🦉   | 27 | 75.00% |
+| Evening 🌃  | 10 | 27.03% |
+| Night 🦉   | 27 | 72.97% |
 
-_Last Updated on Sat, 27 Sep 2025 20:44:45 GMT_
+_Last Updated on Sat, 27 Sep 2025 20:52:04 GMT_
 </details>
+
 
 
 
