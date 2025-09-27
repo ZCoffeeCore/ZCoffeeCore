@@ -161,7 +161,9 @@ async function main() {
 
   // URLs de iconos
   const langIconUrl = `https://skillicons.dev/icons?i=${topLangs.join(',')}&theme=dark`;
-  const frameworksIconUrl = `https://skillicons.dev/icons?i=${frameworks.join(',')}&theme=dark`;
+  const frameworksIconUrl = frameworks.length > 0
+    ? `<p align="center"><img src="https://skillicons.dev/icons?i=${frameworks.join(',')}&theme=dark" /></p>`
+    : `<p align="center">No frameworks detected</p>`;
   const toolsIconUrl = `https://skillicons.dev/icons?i=${tools.join(',')}&theme=dark`;
 
   // Actualizar README
@@ -174,7 +176,7 @@ async function main() {
 
   readme = readme.replace(
     /(<!--FRAMEWORKS_START-->).*(<!--FRAMEWORKS_END-->)/s,
-    `$1\n<p align="center"><img src="${frameworksIconUrl}" /></p>\n$2`
+    `$1\n${frameworksIconUrl}\n$2`
   );
 
   readme = readme.replace(
