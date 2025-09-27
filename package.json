@@ -1,0 +1,12 @@
+{
+  "name": "zcoffeecore-readme-stats",
+  "version": "1.0.0",
+  "description": "Actualiza automáticamente estadísticas de GitHub en el README",
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/updateStats.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
