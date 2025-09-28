@@ -1,37 +1,45 @@
-name: Update README Languages
+name: Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *' 
-  workflow_dispatch: 
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write  
+  contents: write
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
+      # Checkout del repo público
       - uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          
-      - name: Install dependencies
-        run: npm install
+      # Clonar el repo privado "scripts"
+      - name: Clonar scripts privados
+        run: |
+          git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/TU-USUARIO/scripts.git private-scripts
 
+      # Instalar dependencias definidas en el package.json del repo privado
+      - name: Instalar dependencias
+        run: npm install
+        working-directory: ./private-scripts
+
+      # Ejecutar updateTechStack.js desde el repo privado
       - name: Update TechStack README
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-        run: node scripts/updateTechStack.js
+        run: node updateTechStack.js
+        working-directory: ./private-scripts
 
+      # Ejecutar updateStats.js desde el repo privado
       - name: Generate README stats
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-        run: node scripts/updateStats.js
-        
+        run: node updateStats.js
+        working-directory: ./private-scripts
+
+      # Commit de cambios en el README (del repo público)
       - name: Commit changes
         run: |
           git config user.name "github-actions"
