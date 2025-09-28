@@ -18,7 +18,7 @@ jobs:
       # Clonar el repo privado "scripts"
       - name: Clonar scripts privados
         run: |
-          git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/TU-USUARIO/scripts.git private-scripts
+          git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/ZCoffeeCore/Scripts.git private-scripts
 
       # Instalar dependencias definidas en el package.json del repo privado
       - name: Instalar dependencias
