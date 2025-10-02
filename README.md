@@ -17,7 +17,7 @@
 <details><summary><h2>🔧 Tech Stack</h2></summary>
 <p align="center">
   <!--LANGUAGES_START-->
-<p align="center"><img src="https://skillicons.dev/icons?i=javascript,html&theme=dark" /></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=javascript&theme=dark" /></p>
 <!--LANGUAGES_END-->
 </p>
 <p align="center">
@@ -119,27 +119,29 @@ _Last Updated on Sat, 27 Sep 2025 02:54:14 GMT_
 
 
 
+
 <details>
 <summary>📊 Detailed GitHub & Code Time Stats</summary>
 
 **🐱 My GitHub Data**
 - ⏱ Total coding time: N/A
 - 📄 Lines of Code: N/A
-- 📦 GitHub Storage Used: 68 kB
-- 🏆 Contributions in 2025: 51
+- 📦 GitHub Storage Used: 73 kB
+- 🏆 Contributions in 2025: 55
 - 📜 Public Repositories: 2
 - 🔑 Private Repositories: 0
 
 **🌞 Time of Day Activity (most active: Night 🦉)**
 | Time      | Commits | Percentage |
 |-----------|--------|------------|
-| Morning ☀️  | 0 | 0.00% |
-| Daytime 🌆  | 0 | 0.00% |
-| Evening 🌃  | 24 | 47.06% |
-| Night 🦉   | 27 | 52.94% |
+| Morning ☀️  | 2 | 3.64% |
+| Daytime 🌆  | 2 | 3.64% |
+| Evening 🌃  | 24 | 43.64% |
+| Night 🦉   | 27 | 49.09% |
 
-_Last Updated on Wed, 01 Oct 2025 03:32:24 GMT_
+_Last Updated on Thu, 02 Oct 2025 03:06:02 GMT_
 </details>
+
 
 
 
