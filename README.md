@@ -7,7 +7,6 @@
 ## 👋 About Me  
 <p align="center">
 ☕ Passionate about <b>coding</b> & fueled by <b>caffeine</b> <br/>
-💻 Software developer focused on <b>clean code</b> & <b>scalable solutions</b> <br/>
 🚀 Always learning, always building <br/>
 🌐 Open to collaboration and new challenges
 </p>
